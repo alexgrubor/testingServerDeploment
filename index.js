@@ -1,6 +1,7 @@
 import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv'
+const port = process.env.PORT || 3000;
 const app = express();
 dotenv.config();
 
@@ -9,7 +10,7 @@ app.get('/weather', async (req, res) => {
     res.send(response.data);
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is listening on port 3000');
     }
 );
